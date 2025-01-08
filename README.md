@@ -1,26 +1,182 @@
-NAME:PARVATHANENI VENKATA RAMYA SRI COMPANY:CODTECH IT SOLUTIONS ID:CT08DBW DOMAIN:FRONTEND DEVELOPMENT DURATION:DECEMBER 2024 TO JANUARY 2025 MENTOR:NEHA
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color:black;
+            color:yellow;
+        }
 
-Project Title and Description Provide a clear and concise title and description of your quiz app. For example:
-Title: Interactive Digestive System Quiz Description: A responsive and interactive quiz application to test knowledge about the human digestive system. Built using React.js, it offers real-time feedback, score calculation, and a clean user interface.
+        header {
+            background:black;
+            color: yellow;
+            padding: 1rem 0;
+            text-align: center;
+            text-shadow:0px 0px 5px yellow,0px 0px 25px yellow,0px 0px 50px yellow,0px 0px 100px yellow;
+        }
 
-Features Highlight the unique and key features of the quiz app. Examples:
-Interactive multiple-choice questions. Displays correct and incorrect answers with visual feedback. Calculates and shows the user's score and percentage. Fully responsive design for mobile and desktop. Customizable questions for different topics.
+        nav {
+            display: flex;
+            justify-content: center;
+            background:black;
+            padding: 0.5rem;
+        }
 
-Purpose Explain the purpose of the project:
-This project is designed to help users assess their knowledge of the digestive system. It's a learning tool that combines education with interactivity. The app demonstrates the use of React.js and Tailwind CSS for dynamic UI design.
+        nav a {
+            color:black;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            border:2px solid yellow;
+            border-radius:20px;
+            background-color: yellow;
+            box-shadow:0px 0px 5px yellow,0px 0px 25px yellow,0px 0px 50px yellow,0px 0px 100px yellow;
+        }
+        nav a:hover {
+            background: black;
+            border-radius: 20px;
+            border:2px solid yellow;
+            box-shadow:0px 0px 5px black,0px 0px 25px yellow,0px 0px 50px black,0px 0px 100px yellow;
+            color:yellow;
+        }
 
-Technologies Used List the tools, frameworks, and libraries used in the project:
-React.js: For building the dynamic and interactive user interface. Tailwind CSS: For modern, responsive, and utility-first styling. Lucide Icons: For SVG-based icons to enhance visual appeal. HTML5 & CSS3: For structuring and styling components. 5. How It Works Describe how the app functions:
+        section {
+            padding: 2rem;
+        }
 
-The app presents a series of multiple-choice questions. Users select an answer for each question. After submitting, the app calculates the score and highlights the correct and incorrect answers. The score and percentage are displayed at the end of the quiz.
+        .about, .portfolio, .contact {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            text-shadow:0px 0px 5px yellow,0px 0px 25px yellow,0px 0px 50px yellow,0px 0px 100px yellow;
+        }
 
-Future Enhancements Mention possible improvements or extensions:
-Add a timer for each question or the entire quiz. Enable shuffling of questions and options for better randomness. Create a leaderboard for comparing scores. Support multiple quiz categories or topics. Integrate with a backend for storing user data and results.
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
 
-How to Use the App Provide basic steps for users to run or use the app:
-Clone the repository. Install dependencies using a package manager. Start the app on a local development server. Alternatively, access a live version (if hosted online).
+        .portfolio-item {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 5px;
+            transition: transform 0.3s;
+            border:2px solid yellow;
+            box-shadow:0px 0px 5px black,0px 0px 25px yellow;
+        }
 
-Screenshots or Demo Explain how screenshots or a live demo can be used to showcase the app:
-Include visuals to demonstrate the app's interface, such as question screens, feedback after answers, and the score display. If hosted online, provide a link to the live demo.
+        .portfolio-item img {
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 0.5rem;
+        }
 
-Contribution Guidelines Explain how others can contribute to the project:
+        .portfolio-item:hover {
+            transform: scale(1.05);
+            background-color:transparent;
+            box-shadow: 0px 0px 5px yellow,0px 0px 10px yellow;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: white;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        input, textarea, button {
+            padding: 0.5rem;
+            font-size: 1rem;
+            border: 2px solid yellow;
+            border-radius: 5px;
+            background-color: transparent;
+            box-shadow: 0px 0px 8px yellow;
+        }
+
+        button {
+            background:yellow;
+            color: black;
+            border: none;
+            cursor: pointer;
+            text-shadow:0px 0px 6px black;
+        }
+
+        button:hover {
+            background:black;
+            color:yellow;
+            text-shadow:0px 0px 6px yellow;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Developer Portfolio</h1>
+        <p>Welcome to my personal portfolio website!</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm a developer passionate about creating innovative solutions. I specialize in front-end and back-end development. Here you can explore my work and connect with me!</p>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <h2>Portfolio</h2>
+        <p>Here are some of my recent projects:</p>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="C:\Users\ramya\Pictures\Screenshots\Screenshot 2025-01-08 194746.png" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>Designation of responsive login form with some background image and hover effects</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="C:\Users\ramya\Pictures\Screenshots\Screenshot 2025-01-08 194831.png" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>Product cart desigantion using css and html and javascript</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="C:\Users\ramya\Pictures\Screenshots\Screenshot 2025-01-08 195030.png" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>Implementation of an quiz app where interactio of human occurs due to help of API's</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Developer Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>
